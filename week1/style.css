@@ -82,6 +82,8 @@
     width: 21%;
     flex-grow: 1;
   }
+  .father {
+  }
 }
 
 @media (max-width: 600px) {
