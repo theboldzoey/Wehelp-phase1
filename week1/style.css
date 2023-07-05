@@ -18,64 +18,95 @@
 .banner {
   height: 200px;
   background-color: blanchedalmond;
-  font-size: 40pt;
+  font-size: 40px;
   text-align: Center;
   line-height: 200px;
 }
+.father {
+  display: flex;
+  justify-content: center;
+}
 .container {
-  display: table;
-  margin-right: auto;
-  margin-left: auto;
   width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .promotion {
-  flex: none;
-  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
   width: 380px;
-  height: 50px;
   background-color: aqua;
 }
-.bg-img {
-  background-image: url("./pic.jpg");
+.promotion img {
+  object-fit: cover;
   width: 80px;
+  height: 50px;
 }
 
 .product {
   flex: none;
-  margin: 10px;
   width: 180px;
   background-color: aqua;
   text-align: center;
   line-height: 50px;
 }
+.product img {
+  width: 100%;
+}
 @media (max-width: 1200px) {
-  .container {
-    width: 90%;
+  .father {
+    width: 90vw;
+    margin: auto;
   }
-  .content {
-    width: 90%;
+  .container {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .promotion {
+    width: 30vw;
+    flex-grow: 1;
+  }
+  .product {
+    width: 21%;
+    flex-grow: 1;
   }
 }
 
 @media (max-width: 600px) {
+  .banner {
+    font-size: 20px;
+  }
   .mobile-menu {
     display: block;
   }
   .desktop-menu {
     display: none;
   }
+  .father {
+    width: 90vw;
+    margin: auto;
+  }
   .container {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .promotion {
-    width: 90%;
+    width: 90vw;
   }
   .product {
-    width: 90%;
+    width: 90vw;
   }
 }
