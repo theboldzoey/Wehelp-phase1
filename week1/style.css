@@ -56,13 +56,16 @@
   width: 80px;
   height: 50px;
 }
+.promotion p {
+  padding-left: 10px;
+}
 
 .product {
   flex: none;
   width: 180px;
   background-color: aqua;
   text-align: center;
-  line-height: 50px;
+  line-height: 20px;
 }
 .product img {
   width: 100%;
