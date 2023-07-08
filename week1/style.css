@@ -1,6 +1,13 @@
 .body {
   font-size: 20pt;
+  margin: 0;
+  padding: 0;
+  background: 232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  overflow-x: hidden;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -16,6 +23,39 @@
 .mobile-menu {
   display: none;
 }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #cdcdcd;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+}
+
 .headline {
   flex: none;
 }
@@ -70,6 +110,41 @@
 .product img {
   width: 100%;
 }
+
+.product2 {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.product2 img {
+  display: block;
+  width: 180px;
+  height: 180px;
+}
+.star {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.star img {
+  width: 25px;
+  height: 25px;
+}
+.float-title {
+  width: 180px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   .father {
     width: 90vw;
@@ -90,7 +165,15 @@
     width: 21%;
     flex-grow: 1;
   }
-  .father {
+  .product2 {
+    width: 21%;
+    flex-grow: 1;
+  }
+  .product2 img {
+    width: 100%;
+  }
+  .float-title {
+    width: 100%;
   }
 }
 
@@ -118,5 +201,21 @@
   }
   .product {
     width: 90vw;
+  }
+  .product2 {
+    width: 90vw;
+    flex-grow: 1;
+  }
+  .product2 img {
+    width: 100%;
+  }
+  .float-title {
+    width: 100%;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
   }
 }
